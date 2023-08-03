@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!item) return;
 
-        if (event.target.classList.contains('drop-zone')) {
+        // Check if the item is being moved to a different drop zone
+        if (!event.target.contains(item)) {
             event.target.appendChild(item);
         }
     }
